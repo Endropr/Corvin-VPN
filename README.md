@@ -2,7 +2,7 @@
 
 A complete client-side system for a commercial VPN service.
 
-**Live website:** [korvinvpn.com](https://korvinvpn.com)
+[![Website](https://img.shields.io/badge/Website-2496ED?style=for-the-badge&logo=google-chrome&logoColor=white)](https://korvinvpn.com/)
 
 ---
 
