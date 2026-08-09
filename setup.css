@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Хедер */
+.header {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,160,255,0.25);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(0,180,255,0.4));
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b0d0ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 160, 255, 0.4);
+    border-radius: 24px;
+    transition: all 0.3s;
+}
+.btn-back:hover {
+    background: rgba(0, 160, 255, 0.1);
+    border-color: #00b4ff;
+    color: #fff;
+}
+.btn-back-text {
+    display: inline;
+}
+@media (max-width: 768px) {
+    .btn-back {
+        padding: 8px 12px;
+        gap: 0;
+    }
+    .btn-back-text {
+        display: none;
+    }
+}
+
+/* Основной контент */
+.setup-page {
+    padding: 50px 0;
+}
+
+.setup-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, #c3e4ff, #2f8eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Видео */
+.setup-video {
+    margin-bottom: 40px;
+}
+
+.video-wrapper-large {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 160, 255, 0.5);
+    box-shadow: 0 0 35px rgba(0, 100, 255, 0.3);
+    background: #0a0f1a;
+}
+
+.video-custom {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-custom video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-custom video::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(0, 150, 255, 0.3);
+    border: 2px solid rgba(0, 180, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.play-btn:hover {
+    background: rgba(0, 150, 255, 0.5);
+    border-color: #00b4ff;
+    box-shadow: 0 0 20px rgba(0, 160, 255, 0.4);
+}
+.play-btn svg {
+    margin-left: 4px;
+}
+.play-text {
+    color: #8aa0c0;
+    font-size: 0.9rem;
+}
+
+/* Кнопка во весь экран */
+.fullscreen-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 5;
+    opacity: 0;
+}
+@media (min-width: 769px) {
+    .video-custom:hover .fullscreen-btn {
+        opacity: 1;
+    }
+    .fullscreen-btn:hover {
+        background: rgba(0, 150, 255, 0.6);
+        border-color: #00b4ff;
+    }
+}
+@media (max-width: 768px) {
+    .fullscreen-btn {
+        display: none;
+    }
+}
+
+/* Аккордеон */
+.setup-section {
+    margin-bottom: 20px;
+}
+
+.accordion-btn {
+    width: 100%;
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 16px;
+    padding: 18px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #d6ecff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.accordion-btn:hover {
+    border-color: #00b4ff;
+    background: rgba(15, 30, 55, 0.8);
+}
+
+.accordion-arrow {
+    font-size: 1.5rem;
+    color: #00a6ff;
+    transition: transform 0.3s;
+}
+.accordion.open .accordion-arrow {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(10, 20, 40, 0.4);
+    border-radius: 0 0 16px 16px;
+    margin-top: -5px;
+    padding: 0 24px;
+}
+.accordion.open .accordion-content {
+    max-height: 3000px;
+}
+
+/* Блок с информацией о ключах */
+.keys-info {
+    padding: 20px 0 0;
+    color: #b0c8dd;
+    line-height: 1.8;
+}
+.keys-info ul {
+    list-style: disc;
+    margin: 8px 0 8px 20px;
+}
+.keys-info li {
+    margin-bottom: 6px;
+}
+
+/* Заголовки внутри аккордеона */
+.instruction-subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #c6e2ff;
+    margin-bottom: 12px;
+}
+
+/* Инструкция */
+.instruction-list {
+    padding: 0 0 20px 20px;
+    color: #b0c8dd;
+    line-height: 1.8;
+}
+.instruction-list li {
+    margin-bottom: 12px;
+}
+.instruction-list ul {
+    list-style: disc;
+    margin: 8px 0 8px 20px;
+}
+.instruction-list a {
+    color: #00b4ff;
+    text-decoration: underline;
+}
+.instruction-note {
+    font-size: 0.9rem;
+    color: #8aa0c0;
+    margin-top: 6px;
+}
+
+/* Совет */
+.instruction-tip {
+    padding: 16px 0 20px;
+    color: #8aa0c0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* FAQ */
+.setup-faq {
+    margin-top: 40px;
+}
+
+.faq-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    background: linear-gradient(180deg, #c3e4ff, #2f8eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.faq-item {
+    border: 1px solid rgba(0, 160, 255, 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #d0e5ff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-question::after {
+    content: "+";
+    color: #00a6ff;
+    font-size: 1.5rem;
+}
+.faq-item.active .faq-question::after {
+    content: "−";
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+    background: rgba(0, 20, 50, 0.5);
+}
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+.faq-answer p {
+    padding: 0 20px 16px;
+    color: #b8d2f0;
+}
+.faq-answer a {
+    color: #00b4ff;
+    text-decoration: underline;
+}
+
+/* Футер */
+.footer {
+    border-top: 1px solid rgba(0, 160, 255, 0.2);
+    padding: 30px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-contacts {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c6e2ff;
+    margin-bottom: 12px;
+}
+
+.footer-contact-item {
+    color: #8aa0c0;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.footer-label {
+    color: #6a80a0;
+    font-weight: 500;
+}
+
+.footer-contact-item a {
+    color: #00b4ff;
+    text-decoration: none;
+}
+
+.footer-support-text {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 160, 255, 0.2);
+}
+
+.footer-copy {
+    flex-shrink: 0;
+    padding-top: 32px;
+}
+
+.footer-copy p {
+    color: #5a7a9a;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .footer-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-copy {
+        padding-top: 0;
+    }
+    .setup-title {
+        font-size: 1.8rem;
+    }
+    .accordion-btn {
+        font-size: 1rem;
+        padding: 14px 18px;
+    }
+    .instruction-list {
+        padding-left: 16px;
+    }
+    .accordion-content {
+        padding: 0 16px;
+    }
+}

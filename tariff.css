@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== ПЛАВНОЕ ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Хедер */
+.header {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,160,255,0.25);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(0, 180, 255, 0.4));
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 14px rgba(0,180,255,0.5);
+}
+
+.logo-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.brand-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #a0e9ff, #3f8cff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* Кнопка возврата */
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b0d0ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 160, 255, 0.4);
+    border-radius: 24px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-back:hover {
+    background: rgba(0, 160, 255, 0.1);
+    border-color: #00b4ff;
+    color: #fff;
+}
+
+.btn-back svg {
+    flex-shrink: 0;
+}
+
+/* Текст "На главную" — скрыть на мобильных */
+.btn-back-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .btn-back {
+        padding: 8px 12px;
+        gap: 0;
+    }
+    
+    .btn-back-text {
+        display: none;
+    }
+    
+    .btn-back svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Кнопки */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(105deg, #003c8c, #001d4d);
+    border: 1.5px solid #00a6ff;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 24px #0066ff;
+}
+
+.btn-large {
+    font-size: 1.15rem;
+    padding: 1rem 3rem;
+}
+
+.btn-small {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.3rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #00a6ff;
+    color: #e0f0ff;
+    font-weight: 600;
+    padding: 0.55rem 1.3rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: rgba(0,100,255,0.15);
+}
+
+/* Страница тарифа */
+.tariff-page {
+    padding: 50px 0 30px;
+}
+
+.tariff-hero {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(145deg, #020d1f, #000);
+    border-radius: 28px;
+    border: 1px solid rgba(0, 160, 255, 0.35);
+    margin-bottom: 50px;
+}
+
+.tariff-badge {
+    display: inline-block;
+    background: #006eff;
+    color: #fff;
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    visibility: hidden;
+}
+
+.tariff-badge.show {
+    visibility: visible;
+}
+
+.tariff-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(180deg, #fff, #b0d9ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+}
+
+.tariff-subtitle {
+    font-size: 1.1rem;
+    color: #9ab9dd;
+    margin-bottom: 24px;
+}
+
+/* Блок с ценами */
+.tariff-price-block {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: nowrap; /* Запрещаем перенос */
+}
+
+.tariff-old-price {
+    color: #6f8aaa;
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tariff-price {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #75d0ff, #2b6eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tariff-period {
+    color: #8aa0c0;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 400px) {
+    .tariff-price {
+        font-size: 2.2rem;
+    }
+    
+    .tariff-old-price {
+        font-size: 0.95rem;
+    }
+    
+    .tariff-period {
+        font-size: 0.85rem;
+    }
+    
+    .tariff-price-block {
+        gap: 6px;
+    }
+}
+
+.pay-note {
+    font-size: 0.8rem;
+    color: #5a7a9a;
+    margin-top: 14px;
+}
+
+/* Преимущества */
+.tariff-description h2,
+.how-it-works h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, #c3e4ff, #2f8eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* Иконки преимуществ */
+.benefit-icon-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 0 10px rgba(0, 160, 255, 0.4));
+    transition: transform 0.3s;
+}
+
+.benefit-item:hover .benefit-icon-img {
+    transform: scale(1.1);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.benefit-item {
+    background: rgba(10, 20, 40, 0.7);
+    border-radius: 18px;
+    padding: 22px 20px;
+    border: 1px solid rgba(0, 180, 255, 0.2);
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.benefit-item h4 {
+    color: #d6ecff;
+    margin-bottom: 6px;
+}
+
+.benefit-item p {
+    color: #8eaecf;
+    font-size: 0.85rem;
+}
+
+/* Шаги */
+.how-it-works {
+    margin-bottom: 50px;
+}
+
+.steps {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+    background: rgba(10, 20, 40, 0.5);
+    border-radius: 20px;
+    padding: 24px 18px;
+    border: 1px solid rgba(0, 160, 255, 0.2);
+}
+
+.step-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0044ff, #00a6ff);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+}
+
+.step h4 {
+    color: #d6ecff;
+    margin-bottom: 6px;
+}
+
+.step p {
+    color: #8eaecf;
+    font-size: 0.85rem;
+}
+
+/* Кнопка внизу */
+.tariff-footer-cta {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    border-top: 1px solid rgba(0, 160, 255, 0.2);
+    padding: 30px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-contacts {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c6e2ff;
+    margin-bottom: 12px;
+}
+
+.footer-contact-item {
+    color: #8aa0c0;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.footer-label {
+    color: #6a80a0;
+    font-weight: 500;
+}
+
+.footer-contact-item a {
+    color: #00b4ff;
+    text-decoration: none;
+    transition: color 0.3s;
+    word-break: break-all;
+}
+
+.footer-contact-item a:hover {
+    color: #4dc9ff;
+    text-decoration: underline;
+}
+
+.footer-support {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 160, 255, 0.2);
+}
+
+.footer-copy {
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
+.footer-copy p {
+    color: #5a7a9a;
+    font-size: 0.8rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Адаптив */
+@media (max-width: 650px) {
+    .footer-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-contacts {
+        min-width: 100%;
+    }
+    
+    .footer-copy {
+        align-self: flex-start;
+    }
+    
+    .footer-copy p {
+        white-space: normal;
+    }
+    
+    .footer-contact-item {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Частицы */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header, .tariff-page, .footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .tariff-title { font-size: 1.8rem; }
+    .tariff-price { font-size: 2.2rem; }
+    .steps { flex-direction: column; align-items: center; }
+}
+
+/* ===== ЧЕКБОКС ОФЕРТЫ ===== */
+.oferta-checkbox {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.oferta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.oferta-input {
+    display: none;
+}
+
+.oferta-custom-checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(0, 160, 255, 0.5);
+    border-radius: 6px;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.oferta-input:checked + .oferta-custom-checkbox {
+    background: #006eff;
+    border-color: #006eff;
+}
+
+.oferta-input:checked + .oferta-custom-checkbox::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.oferta-text {
+    color: #9ab9dd;
+    font-size: 0.9rem;
+}
+
+.oferta-link {
+    color: #00b4ff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.oferta-link:hover {
+    color: #4dc9ff;
+}
+
+/* Кнопка по умолчанию — заблокирована */
+.btn-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+    background: #1a1a2e !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #5a5a7a !important;
+    box-shadow: none !important;
+}
+
+/* Кнопка активна */
+.btn-active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    background: linear-gradient(105deg, #003c8c, #001d4d) !important;
+    border-color: #00a6ff !important;
+    color: #fff !important;
+    box-shadow: 0 0 16px rgba(0, 102, 255, 0.3) !important;
+}
+
+/* Кнопка ВСЕГДА серая по умолчанию */
+#payButton,
+#payButtonBottom {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+    background: #1a1a2e !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+    color: #5a5a7a !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+/* Кнопка активна ТОЛЬКО когда есть класс btn-active */
+#payButton.btn-active,
+#payButtonBottom.btn-active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    background: linear-gradient(105deg, #003c8c, #001d4d) !important;
+    border: 1.5px solid #00a6ff !important;
+    color: #fff !important;
+    box-shadow: 0 0 16px rgba(0, 102, 255, 0.3) !important;
+}

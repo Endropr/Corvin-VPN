@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Инструкция по установке — Corvin VPN</title>
+    <link rel="stylesheet" href="setup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-block">
+                <img src="logo-full.png" alt="Corvin VPN" class="logo-image">
+            </a>
+            <a href="javascript:history.back()" class="btn-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b4ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span class="btn-back-text">Назад</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="setup-page">
+        <div class="container">
+            
+            <h1 class="setup-title">Инструкция по установке и настройке Corvin VPN</h1>
+            
+            <!-- ВИДЕО -->
+            <div class="setup-video">
+                <div class="video-wrapper-large video-custom" id="customVideo">
+                    <video id="setupVideo" width="100%" poster="setup-banner.png" preload="metadata">
+                        <source src="video/instruction.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-play-overlay" id="playOverlay">
+                        <div class="play-btn">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="#fff">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Кнопка во весь экран -->
+                    <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Во весь экран">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <polyline points="9 21 3 21 3 15"></polyline>
+                            <line x1="21" y1="3" x2="14" y2="10"></line>
+                            <line x1="3" y1="21" x2="10" y2="14"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- ЕДИНЫЙ АККОРДЕОН: Инструкция по установке -->
+            <div class="setup-section accordion">
+                <button class="accordion-btn">
+                    <span> Как установить и настроить VPN</span>
+                    <span class="accordion-arrow">+</span>
+                </button>
+                <div class="accordion-content">
+                    
+                    <!-- Общая информация о ключах -->
+                    <div class="keys-info">
+                        <p>🔑 <strong>Вам на почту придёт два ключа:</strong></p>
+                        <ul>
+                            <li><strong>Первый ключ</strong> — для компьютера (Windows, macOS, Linux)</li>
+                            <li><strong>Второй ключ</strong> — для мобильных устройств (обход белых списков)</li>
+                        </ul>
+                        <p class="instruction-note">Оба ключа работают в любом современном VPN-приложении: Happ, V2RayTun, Nekoray и других.</p>
+                    </div>
+
+                    <hr style="border-color: rgba(0,160,255,0.2); margin: 20px 0;">
+
+                    <!-- Инструкция для ПК -->
+                    <h3 class="instruction-subtitle"> Для компьютера (ПК)</h3>
+                    <ol class="instruction-list">
+                        <li>
+                            <strong>Скачайте любое VPN-приложение:</strong>
+                            <ul class="app-links">
+                                <li><a href="https://www.happ.su/main" target="_blank">Happ VPN</a></li>
+                                <li><a href="https://v2raytun.com/" target="_blank">V2RayTun</a></li>
+                                <li><a href="https://github.com/Matsuridayo/nekoray/releases" target="_blank">Nekoray</a></li>
+                            </ul>
+                            <p class="instruction-note">Для Windows скачивайте файлы с расширением <strong>.exe</strong>, для macOS — <strong>.dmg</strong>, для Linux — <strong>.AppImage</strong>.</p>
+                        </li>
+                        <li>
+                            <strong>Запустите приложение.</strong> Если потребуются права администратора — предоставьте их (этим приложениям можно доверять).
+                        </li>
+                        <li>
+                            <strong>Добавьте первый ключ</strong> (из письма, для ПК). Обычно в приложении есть кнопка «+», «Добавить», «Import» или «Вставить из буфера».
+                        </li>
+                        <li>
+                            <strong>Проверьте соединение.</strong> Нажмите «Test», «Ping» или «SpeedTest» рядом с добавленным ключом.
+                        </li>
+                        <li>
+                            <strong>Нажмите «Подключить»</strong> — и наслаждайтесь свободным интернетом!
+                        </li>
+                    </ol>
+
+                    <hr style="border-color: rgba(0,160,255,0.2); margin: 20px 0;">
+
+                    <!-- Инструкция для мобильных -->
+                    <h3 class="instruction-subtitle"> Для мобильных устройств</h3>
+                    <ol class="instruction-list">
+                        <li>
+                            <strong>Скачайте любое VPN-приложение из официального магазина:</strong>
+                            <ul class="app-links">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.v2raytun.android" target="_blank">V2RayTun (Google Play)</a></li>
+                                <li><a href="https://apps.apple.com/app/v2raytun/id1476629784" target="_blank">V2RayTun (App Store)</a></li>
+                                <li>Happ VPN, Nekoray (Android) — доступны на официальных сайтах</li>
+                            </ul>
+                            <p class="instruction-note">Для iOS также подходят: Happ, Foxo, Streisand. Установите любое приложение, поддерживающее VLESS/Trojan протоколы.</p>
+                        </li>
+                        <li>
+                            <strong>Скопируйте второй ключ</strong> (из письма, для мобильных устройств). Это специальный ключ для обхода белых списков.
+                        </li>
+                        <li>
+                            <strong>Добавьте ключ в приложение:</strong> нажмите «+», «Добавить подключение» или «Import», затем выберите «Вставить из буфера» или «Paste from clipboard».
+                        </li>
+                        <li>
+                            <strong>Проверьте соединение</strong> кнопкой «Ping» или «Test».
+                        </li>
+                        <li>
+                            <strong>Нажмите «Подключить»</strong> — готово! Вы в свободном интернете.
+                        </li>
+                    </ol>
+
+                    <div class="instruction-tip">
+                        <p>💡 <strong>Совет:</strong> Если один ключ перестал работать — попробуйте второй. Оба ключа взаимозаменяемы и работают на любых устройствах. Для наилучшей производительности на мобильном интернете используйте второй ключ.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="faq setup-faq">
+                <h2 class="faq-title">Часто задаваемые вопросы (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Если у Вас перестал работать VPN — что делать?</button>
+                    <div class="faq-answer"><p>Попробуйте перезагрузить его (Выключить-Включить). Роскомнадзор постоянно придумывает новые пакости и режет VPN трафик, в связи с этим возможны сбои не только у VPN сервисов, но и напрямую у провайдеров/операторов связи.</p></div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Если 1 способ не помог — куда обращаться?</button>
+                    <div class="faq-answer"><p>Рекомендуем обратиться в техподдержку Corvin VPN или напрямую к Алексу Корвину в его Telegram <a href="https://t.me/cerber92" target="_blank">@cerber92</a>. Мы проверим состояние подключения и дадим Вам бесплатную замену ключа на рабочий вариант.</p></div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Можно ли самостоятельно менять настройки ключа?</button>
+                    <div class="faq-answer"><p>Большая просьба: ничего не изменять в настройках ключа (Конфигурации, адреса, порты, узлы соединения и т.д.). Если ключ по-прежнему не работает — обратитесь к нам, мы оперативно дадим Вам замену.</p></div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Можно ли использовать один ключ на всех устройствах?</button>
+                    <div class="faq-answer"><p>Да! Оба ключа универсальны и работают на любых устройствах: ПК, смартфонах, планшетах, роутерах. Разделение на «первый» и «второй» — лишь рекомендация для оптимальной производительности: первый оптимизирован для домашнего интернета, второй — для мобильного.</p></div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-contacts">
+                <h4 class="footer-title">Контакты</h4>
+                <p class="footer-contact-item">
+                    <span class="footer-label">Самозанятый:</span> Агнаев Александр Аланович
+                </p>
+                <p class="footer-contact-item">
+                    <span class="footer-label">ИНН:</span> 151007170054
+                </p>
+                <p class="footer-contact-item">
+                    <span class="footer-label">Email:</span> 
+                    <a href="mailto:agnaev.92@gmail.com">agnaev.92@gmail.com</a>
+                </p>
+                <p class="footer-contact-item">
+                    <span class="footer-label">Telegram:</span> 
+                    <a href="https://t.me/cerber92" target="_blank">@cerber92</a>
+                </p>
+                <p class="footer-contact-item footer-support-text">
+                    <span class="footer-label">Вопросы по оплате и доступу:</span> 
+                    <a href="mailto:support@korvinvpn.com">support@korvinvpn.com</a>
+                </p>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Corvin VPN — интернет без границ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="setup.js"></script>
+</body>
+</html>

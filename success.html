@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата прошла — Corvin VPN</title>
+    <link rel="stylesheet" href="tariff.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+     .success-page {
+    text-align: center;
+    padding: 0px 20px 60px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.success-logo {
+    margin-bottom: 24px;
+}
+
+.success-logo-img {
+    height: 90px;
+    width: auto;
+}
+
+.success-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #75d0ff, #2f8eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.success-text {
+    color: #b0c8dd;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.success-email {
+    color: #8aa0c0;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+}
+
+.success-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(105deg, #003c8c, #001d4d);
+    border: 1.5px solid #00a6ff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
+    border-color: #3ea6ff;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #00a6ff;
+    color: #e0f0ff;
+}
+
+.btn-outline:hover {
+    background: rgba(0, 100, 255, 0.15);
+}
+
+.success-thanks {
+    margin-top: 28px;
+    color: #75d0ff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.success-support {
+    margin-top: 20px;
+    color: #6a80a0;
+    font-size: 0.9rem;
+}
+
+.success-support a {
+    color: #00b4ff;
+    text-decoration: none;
+}
+
+.success-support a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .success-page {
+        padding: 24px 16px 20px;
+    }
+    
+    .success-logo-img {
+        height: 80px;
+    }
+    
+    .success-title {
+        font-size: 1.6rem;
+    }
+    
+    .success-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .btn-primary, .btn-outline {
+        text-align: center;
+    }
+    
+    .success-thanks {
+        font-size: 0.9rem;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-block">
+                <img src="logo-full.png" alt="Corvin VPN" class="logo-image">
+            </a>
+        </div>
+    </header>
+    
+    <main class="tariff-page">
+    <div class="container">
+        <div class="success-page">
+            
+            <!-- Логотип вместо иконки -->
+            <div class="success-logo">
+                <img src="logo.png" alt="Corvin VPN" class="success-logo-img">
+            </div>
+            
+            <h1 class="success-title">Оплата прошла успешно!</h1>
+            
+            <p class="success-text">Ключ VPN отправлен на вашу почту.</p>
+            <p class="success-email">Проверьте папку «Входящие» и «Спам».</p>
+            
+            <div class="success-buttons">
+                <a href="setup.html" class="btn-primary"> Инструкция по установке</a>
+                <a href="index.html" class="btn-outline">← На главную</a>
+            </div>
+            
+            <p class="success-thanks">Спасибо за покупку! Приятного пользования и добро пожаловать в свободный интернет!</p>
+            
+            <p class="success-support">
+                Вопросы? Напишите в Telegram: <a href="https://t.me/corvinemigrate">@corvinemigrate</a>
+            </p>
+            
+        </div>
+    </div>
+</main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p style="text-align:center; color:#5a7a9a; font-size:0.85rem;">© 2026 Corvin VPN — интернет без границ</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

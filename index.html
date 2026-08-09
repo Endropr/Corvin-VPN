@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Corvin VPN</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Corvin VPN - на все случаи жизни">
+    <meta property="og:description" content="Обход блокировок и белых списков. YouTube 4K, Telegram, Instagram без ограничений. Быстро, надёжно, безопасно.">
+    <meta property="og:image" content="https://picsum.photos/1200/630">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">  
+    <meta property="og:url" content="https://korvinvpn.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Corvin VPN">
+    <!-- Для Telegram / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://korvinvpn.com/banner.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- ХЕДЕР -->
+<header class="header">
+    <div class="container header-inner">
+        
+        <!-- Логотип -->
+        <div class="logo-block">
+            <a href="#" class="logo-link">
+                <img src="logo-full.png" alt="Corvin VPN" class="logo-image">
+            </a>
+        </div>
+        
+        <!-- Навигация (десктоп) -->
+        <nav class="nav-links" id="navLinks">
+            <a href="#features">Преимущества</a>
+            <a href="#video">Видео</a>
+            <a href="#pricing">Тарифы</a>
+            <a href="#faq">Вопросы</a>
+        </nav>
+        
+        <!-- Соцсети (десктоп) -->
+        <div class="header-socials">
+            <a href="https://t.me/corvinemigrate" target="_blank" class="header-social-link" aria-label="Telegram">
+                <img src="icons/telegram.png" alt="Telegram" class="header-social-icon">
+            </a>
+            <a href="https://www.instagram.com/korvin9208?igsh=eDQzOTZ1Y3dxc2Vs&utm_source=qr" target="_blank" class="header-social-link" aria-label="Instagram">
+                <img src="icons/instagram.png" alt="Instagram" class="header-social-icon">
+            </a>
+            <a href="https://www.youtube.com/@korvinemigration" target="_blank" class="header-social-link" aria-label="YouTube">
+                <img src="icons/youtube.png" alt="YouTube" class="header-social-icon">
+            </a>
+        </div>
+        
+        <!-- Бургер (мобильные) -->
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        
+    </div>
+    
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-title">Меню</span>
+        </div>
+        
+        <nav class="mobile-nav-links">
+            <a href="#features">Преимущества</a>
+            <a href="#video">Видео</a>
+            <a href="#pricing">Тарифы</a>
+            <a href="#faq">Вопросы</a>
+        </nav>
+        
+        <!-- Соцсети (внизу меню) -->
+        <div class="mobile-socials">
+            <a href="https://t.me/corvinemigrate" target="_blank" class="mobile-social-link">
+                <img src="icons/telegram.png" alt="Telegram" class="mobile-social-icon">
+            </a>
+            <a href="https://www.instagram.com/korvin9208?igsh=eDQzOTZ1Y3dxc2Vs&utm_source=qr" target="_blank" class="mobile-social-link">
+                <img src="icons/instagram.png" alt="Instagram" class="mobile-social-icon">
+            </a>
+            <a href="https://www.youtube.com/@korvinemigration" target="_blank" class="mobile-social-link">
+                <img src="icons/youtube.png" alt="YouTube" class="mobile-social-icon">
+            </a>
+        </div>
+    </div>
+    
+    <!-- Оверлей -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Corvin VPN - на все случаи жизни</h1>
+            <p class="hero-subtitle" style="margin-bottom: 2px;">Включи свободный интернет себе и своим близким.</p>
+            <p class="hero-subtitle" style="margin-bottom: 39px;">Подключай до 3 устройств одновременно и используй интернет без ограничений.</p>
+            <a href="#pricing" class="btn-primary btn-large">ПЕРЕЙТИ К ТАРИФАМ</a>
+        </div>
+    </section>
+
+<!-- ПРЕИМУЩЕСТВА + ВИДЕО -->
+<section id="features" class="features-with-video">
+    <div class="container">
+        
+        <!-- Заголовок по центру -->
+        <h2 class="section-title">Свобода для тебя и твоих близких</h2>
+        <p class="section-subtitle">Одна подписка на 3 устройства одновременно</p>
+        
+        <div class="features-video-row">
+            
+            <!-- ЛЕВАЯ КОЛОНКА — преимущества вертикально -->
+            <div class="features-left">
+                <div class="features-list">
+                    <div class="feature-item-h">
+                        <span class="feature-icon-dot"></span>
+                        <div>
+                            <h4>Сохранность данных</h4>
+                            <p>Шифрование AES-256, протоколы VLESS, Hysteria и Trojan, политика нулевых логов</p>
+                        </div>
+                    </div>
+                    <div class="feature-item-h">
+                        <span class="feature-icon-dot"></span>
+                        <div>
+                            <h4>Ускорение интернета</h4>
+                            <p>Youtube в 4К, Telegram, Instagram, WhatsApp и др. без ограничений</p>
+                        </div>
+                    </div>
+                    <div class="feature-item-h">
+                        <span class="feature-icon-dot"></span>
+                        <div>
+                            <h4>Поддержка юриста по эмиграции</h4>
+                            <p>Ваши средства идут на поддержку Алекса Корвина и проведение консультаций </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ПРАВАЯ КОЛОНКА — видео -->
+<div class="video-right">
+    <div class="video-wrapper-large video-custom" id="customVideo">
+        <video id="heroVideo" width="100%" poster="video-banner.jpg" preload="metadata">
+            <source src="video/demo.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Кнопка Play по центру -->
+        <div class="video-play-overlay" id="playOverlay">
+            <div class="play-btn">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="#fff">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+  <!-- ТАРИФЫ -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2 class="section-title">Выбирайте тариф</h2>
+        <p class="section-subtitle">После оплаты ты получишь уникальный ключ для активации, который будет принадлежать только тебе!</p>
+        
+        <!-- КАРУСЕЛЬ (десктоп) -->
+        <div class="carousel-wrapper" id="carouselWrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Карточки + дубликаты (как было) -->
+                <!-- 1 месяц -->
+                <div class="plan-card">
+                    <h3>1 месяц</h3>
+                    <p class="plan-desc">Тариф «Попробовать»</p>
+                    <div class="price-block">
+                        <span class="new-price">249 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=1month" class="btn-outline">ВЫБРАТЬ</a>
+                </div>
+                
+                <!-- 3 месяца -->
+                <div class="plan-card">
+                    <h3>3 месяца</h3>
+                    <p class="plan-desc">Тариф «Обойти блокировки»</p>
+                    <div class="price-block">
+                        <span class="old-price">1 200 ₽</span>
+                        <span class="new-price">699 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=3months" class="btn-outline">ВЫБРАТЬ</a>
+                </div>
+                
+                <!-- 6 месяцев -->
+                <div class="plan-card popular">
+                    <span class="badge">ПОПУЛЯРНЫЙ</span>
+                    <h3>6 месяцев</h3>
+                    <p class="plan-desc">Тариф «Эксперт по VPN»</p>
+                    <div class="price-block">
+                        <span class="old-price">1 799 ₽</span>
+                        <span class="new-price">1 349 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=6months" class="btn-primary">ВЫБРАТЬ</a>
+                </div>
+                
+                <!-- 12 месяцев -->
+                <div class="plan-card">
+                    <h3>12 месяцев</h3>
+                    <p class="plan-desc">Тариф «Забудь о Чебурнете»</p>
+                    <div class="price-block">
+                        <span class="old-price">4 200 ₽</span>
+                        <span class="new-price">2 499 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=12months" class="btn-outline">ВЫБРАТЬ</a>
+                </div>
+                
+                <!-- ДУБЛИКАТЫ для бесшовности -->
+                <div class="plan-card">
+                    <h3>1 месяц</h3>
+                    <p class="plan-desc">Тариф «Попробовать»</p>
+                    <div class="price-block">
+                        <span class="new-price">249 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=1month" class="btn-outline">ВЫБРАТЬ</a>
+                </div>
+                <div class="plan-card">
+                    <h3>3 месяца</h3>
+                    <p class="plan-desc">Тариф «Обойти блокировки»</p>
+                    <div class="price-block">
+                        <span class="old-price">1 200 ₽</span>
+                        <span class="new-price">699 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=3months" class="btn-outline">ВЫБРАТЬ</a>
+                </div>
+                <div class="plan-card popular">
+                    <span class="badge">ПОПУЛЯРНЫЙ</span>
+                    <h3>6 месяцев</h3>
+                    <p class="plan-desc">Тариф «Эксперт по VPN»</p>
+                    <div class="price-block">
+                        <span class="old-price">1 799 ₽</span>
+                        <span class="new-price">1 349 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=6months" class="btn-primary">ВЫБРАТЬ</a>
+                </div>
+                <div class="plan-card">
+                    <h3>12 месяцев</h3>
+                    <p class="plan-desc">Тариф «Забудь о Чебурнете»</p>
+                    <div class="price-block">
+                        <span class="old-price">4 200 ₽</span>
+                        <span class="new-price">2 499 ₽</span>
+                    </div>
+                    <a href="tariff.html?plan=12months" class="btn-outline">ВЫБРАТЬ</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- СТАТИЧНЫЕ КАРТОЧКИ (мобильные) -->
+        <div class="pricing-static" id="pricingStatic">
+            <div class="plan-card">
+                <h3>1 месяц</h3>
+                <p class="plan-desc">Тариф «Попробовать»</p>
+                <div class="price-block">
+                    <span class="new-price">249 ₽</span>
+                </div>
+                <a href="tariff.html?plan=1month" class="btn-outline">ВЫБРАТЬ</a>
+            </div>
+            
+            <div class="plan-card">
+                <h3>3 месяца</h3>
+                <p class="plan-desc">Тариф «Обойти блокировки»</p>
+                <div class="price-block">
+                    <span class="old-price">1 200 ₽</span>
+                    <span class="new-price">699 ₽</span>
+                </div>
+                <a href="tariff.html?plan=3months" class="btn-outline">ВЫБРАТЬ</a>
+            </div>
+            
+            <div class="plan-card popular">
+                <span class="badge">ПОПУЛЯРНЫЙ</span>
+                <h3>6 месяцев</h3>
+                <p class="plan-desc">Тариф «Эксперт по VPN»</p>
+                <div class="price-block">
+                    <span class="old-price">1 799 ₽</span>
+                    <span class="new-price">1 349 ₽</span>
+                </div>
+                <a href="tariff.html?plan=6months" class="btn-primary">ВЫБРАТЬ</a>
+            </div>
+            
+            <div class="plan-card">
+                <h3>12 месяцев</h3>
+                <p class="plan-desc">Тариф «Забудь о Чебурнете»</p>
+                <div class="price-block">
+                    <span class="old-price">4 200 ₽</span>
+                    <span class="new-price">2 499 ₽</span>
+                </div>
+                <a href="tariff.html?plan=12months" class="btn-outline">ВЫБРАТЬ</a>
+            </div>
+        </div>
+        
+        <!-- Tovarishch -->
+        <div class="tovarishch-block">
+            <div class="tovarishch-card">
+                <span>Нужна помощь с подключением Corvin VPN?</span>
+                <a href="https://korvinvpn.com/setup.html" class="btn-outline btn-small">ИНСТРУКЦИЯ ПО УСТАНОВКЕ</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Отвечаем на вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Corvin VPN работает при белых списках? </button>
+                    <div class="faq-answer"><p>Да! Corvin VPN обходит блокировки, в т.ч. и белые списки, и все зарубежные сервисы работают без ограничений.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Как оплатить и установить Ваш VPN?</button>
+                   <div class="faq-answer"><p>В этом ролике <a href="https://korvinvpn.com/setup.html" class="faq-link">мы подробно объяснили</a> процесс оплаты и установки Corvin VPN.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Какие устройства поддерживаются?</button>
+                    <div class="faq-answer"><p>iPhone, Android, Windows, macOS, Linux и роутеры.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Мои данные в сохранности?</button>
+                    <div class="faq-answer"><p>Абсолютно. Никаких логов, никакой слежки. </p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">У меня появились трудности с установкой VPN. Куда обратиться?</button>
+                    <div class="faq-answer"><p>Поддержка 24/7 в нашем Telegram: <a href="https://t.me/corvinemigrate" target="_blank" class="faq-link">@CorvinEmigrate</a></p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ФУТЕР -->
+    <footer class="footer">
+    <div class="container footer-inner">
+        
+        <!-- Контакты -->
+        <div class="footer-contacts">
+            <h4 class="footer-title">Контакты</h4>
+            <p class="footer-contact-item">
+                <span class="footer-label">Самозанятый:</span> Агнаев Александр Аланович
+            </p>
+            <p class="footer-contact-item">
+                <span class="footer-label">ИНН:</span> 151007170054
+            </p>
+            <p class="footer-contact-item">
+                <span class="footer-label">Email:</span> 
+                <a href="mailto:agnaev.92@gmail.com">agnaev.92@gmail.com</a>
+            </p>
+            <p class="footer-contact-item">
+                <span class="footer-label">Telegram:</span> 
+                <a href="https://t.me/cerber92" target="_blank">@cerber92</a>
+            </p>
+            <p class="footer-contact-item footer-support-text">
+                <span class="footer-label">Вопросы по оплате и доступу:</span> 
+                <a href="mailto:support@korvinvpn.com">support@korvinvpn.com</a>
+            </p>
+        </div>
+        
+        <!-- Копирайт -->
+        <div class="footer-copy">
+            <p>© 2026 Corvin VPN — интернет без границ</p>
+        </div>
+        
+    </div>
+</footer>
+        
+    <canvas id="particles-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
