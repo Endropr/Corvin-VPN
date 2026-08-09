@@ -59,19 +59,24 @@ VPN infrastructure, Remnawave panel management and key generation are handled by
 ---
 
 ## Project Structure
+
 ```bash
 ├── index.html              # Main landing page
-├── tariff.html             # Tariff selection
+├── tariff.html             # Tariff selection page
 ├── setup.html              # Setup instructions
 ├── success.html            # Successful payment page
 ├── oferta.html             # Public offer (legal)
 ├── pay.php                 # Create payment
 ├── result.php              # Handle payment result + deliver key
-├── styles.css
-├── script.js
-├── tariff.js
-├── setup.js
-└── assets/                 # Images, icons, video
+├── styles.css              # Main styles
+├── tariff.css              # Tariff page styles
+├── setup.css               # Setup page styles
+├── script.js               # Main scripts
+├── tariff.js               # Tariff page scripts
+├── setup.js                # Setup page scripts
+├── icons/                  # Icons
+├── screenshots/            # Project screenshots
+└── *.png / *.jpg           # Images and banners
 ```
 ---
 
